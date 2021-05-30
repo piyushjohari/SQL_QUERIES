@@ -1,0 +1,9 @@
+select max(salary) 'SecondHighestSalary' from Employee where salary NOT IN (select max(salary) from Employee)
+
+
+
+
+select (select DISTINCT(salary) from Employee e1 
+where 2-1=
+(select count(DISTINCT salary) from Employee e2 where e1.salary<e2.salary)
+) AS "SecondHighestSalary" from dual;

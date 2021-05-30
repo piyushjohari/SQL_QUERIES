@@ -1,0 +1,1 @@
+select score 'Score',(select count(Distinct score) from Scores s2 where s1.score<s2.score)+1 'Rank' from Scores s1 order by score DESC 
